@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.652789342214821" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="996.0" prefWidth="1203.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.MainFormController">
+    <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+            <children>
+                <ImageView fx:id="img_main" fitHeight="590.0" fitWidth="573.0" layoutX="104.0" layoutY="117.0" pickOnBounds="true" smooth="false" AnchorPane.bottomAnchor="287.0" AnchorPane.leftAnchor="104.0" AnchorPane.rightAnchor="103.0" AnchorPane.topAnchor="117.0">
+                    <image>
+                        <Image url="file:/Users/arman/Documents/Projects/Java/NetBeans/Real/NaiiveBayesClassifier_Faces/images/question1.jpg" />
+                    </image>
+                </ImageView>
+                <ImageView fx:id="img_alternative1" fitHeight="134.0" fitWidth="160.0" layoutX="104.0" layoutY="743.0" onMouseClicked="#img_click_replaceAlternativeWithMainImage" pickOnBounds="true" smooth="false" AnchorPane.bottomAnchor="117.0" AnchorPane.leftAnchor="104.0" AnchorPane.rightAnchor="516.0" AnchorPane.topAnchor="743.0">
+                    <image>
+                        <Image url="file:/Users/arman/Documents/Projects/Java/NetBeans/Real/NaiiveBayesClassifier_Faces/images/question4.jpg" />
+                    </image>
+                </ImageView>
+                <ImageView fx:id="img_alternative2" fitHeight="134.0" fitWidth="160.0" layoutX="311.0" layoutY="743.0" onMouseClicked="#img_click_replaceAlternativeWithMainImage" pickOnBounds="true" smooth="false" AnchorPane.bottomAnchor="117.0" AnchorPane.leftAnchor="311.0" AnchorPane.rightAnchor="309.0" AnchorPane.topAnchor="743.0">
+                    <image>
+                        <Image url="file:/Users/arman/Documents/Projects/Java/NetBeans/Real/NaiiveBayesClassifier_Faces/images/question3.jpg" />
+                    </image>
+                </ImageView>
+                <ImageView fx:id="img_alternative3" fitHeight="134.0" fitWidth="160.0" layoutX="517.0" layoutY="743.0" onMouseClicked="#img_click_replaceAlternativeWithMainImage" pickOnBounds="true" smooth="false" AnchorPane.bottomAnchor="117.0" AnchorPane.leftAnchor="517.0" AnchorPane.rightAnchor="103.0" AnchorPane.topAnchor="743.0">
+                    <image>
+                        <Image url="file:/Users/arman/Documents/Projects/Java/NetBeans/Real/NaiiveBayesClassifier_Faces/images/question2.jpg" />
+                    </image>
+                </ImageView>
+            <Label fx:id="lbl_mainProbability" layoutX="351.0" layoutY="24.0" style="-fx-alignment: Center;" text="Label" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0">
+               <font>
+                  <Font size="31.0" />
+               </font>
+               <effect>
+                  <Reflection />
+               </effect>
+            </Label>
+            <Label fx:id="lbl_alternativeProbability1" layoutX="122.0" layoutY="903.0" prefHeight="26.0" prefWidth="116.0" style="-fx-alignment: Center;" text="Label" AnchorPane.leftAnchor="122.0" AnchorPane.rightAnchor="542.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <effect>
+                  <Reflection />
+               </effect>
+            </Label>
+            <Label fx:id="lbl_alternativeProbability2" layoutX="325.0" layoutY="903.0" prefHeight="26.0" prefWidth="116.0" style="-fx-alignment: Center;" text="Label" AnchorPane.leftAnchor="325.0" AnchorPane.rightAnchor="339.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <effect>
+                  <Reflection />
+               </effect>
+            </Label>
+            <Label fx:id="lbl_alternativeProbability3" layoutX="539.0" layoutY="903.0" prefHeight="26.0" prefWidth="116.0" style="-fx-alignment: Center;" text="Label" AnchorPane.leftAnchor="539.0" AnchorPane.rightAnchor="125.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <effect>
+                  <Reflection />
+               </effect>
+            </Label>
+            </children>
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+            <children>
+                <ComboBox fx:id="combo_gender" layoutX="106.0" layoutY="39.0" prefWidth="150.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="140.0">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="male" />
+                            <String fx:value="female" />
+                        </FXCollections>
+                    </items>
+                    <value>
+                        <String fx:value="male" />
+                    </value>
+                </ComboBox>
+                <CheckBox fx:id="chb_gender" layoutX="275.0" layoutY="43.0" mnemonicParsing="false" prefWidth="80.0" text="جنسیت" AnchorPane.rightAnchor="30.0" />
+                <CheckBox fx:id="chb_eyeColor" layoutX="293.0" layoutY="716.0" mnemonicParsing="false" prefWidth="80.0" text="رنگ چشم" AnchorPane.rightAnchor="30.0" />
+                <CheckBox fx:id="chb_hairColor" layoutX="300.0" layoutY="779.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="80.0" text="رنگ مو" AnchorPane.rightAnchor="30.0" />
+                <CheckBox fx:id="chb_skinColor" layoutX="306.0" layoutY="833.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="80.0" text="رنگ پوست" AnchorPane.rightAnchor="30.0" />
+                <CheckBox fx:id="chb_beardModel" layoutX="289.0" layoutY="265.0" mnemonicParsing="false" prefWidth="80.0" text="مدل ریش" AnchorPane.rightAnchor="30.0" />
+                <ComboBox fx:id="combo_beardModel" layoutX="106.0" layoutY="261.0" prefWidth="150.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="140.0">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="fill" />
+                            <String fx:value="goat" />
+                            <String fx:value="none" />
+                        </FXCollections>
+                    </items>
+                    <value>
+                        <String fx:value="fill" />
+                    </value>
+                </ComboBox>
+                <CheckBox fx:id="chb_hairModel" layoutX="289.0" layoutY="310.0" mnemonicParsing="false" prefWidth="80.0" text="مدل مو" AnchorPane.rightAnchor="30.0" />
+                <ComboBox fx:id="combo_hairModel" layoutX="106.0" layoutY="306.0" prefWidth="150.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="140.0">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="straight" />
+                            <String fx:value="curly" />
+                            <String fx:value="bald" />
+                        </FXCollections>
+                    </items>
+                    <value>
+                        <String fx:value="straight" />
+                    </value>
+                </ComboBox>
+                <CheckBox fx:id="chb_glasses" layoutX="289.0" layoutY="361.0" mnemonicParsing="false" prefWidth="80.0" text="عینک" AnchorPane.rightAnchor="30.0" />
+                
+                <CheckBox fx:id="chb_age" layoutX="286.0" layoutY="419.0" mnemonicParsing="false" prefWidth="80.0" text="سن" AnchorPane.rightAnchor="30.0" />
+                <CheckBox fx:id="chb_hairLong" layoutX="297.0" layoutY="480.0" mnemonicParsing="false" prefWidth="80.0" text="اندازه مو" AnchorPane.rightAnchor="30.0" />
+                <CheckBox fx:id="chb_mustacheLong" layoutX="300.0" layoutY="533.0" mnemonicParsing="false" prefWidth="80.0" text="اندازه سبیل" AnchorPane.rightAnchor="30.0" />
+                <CheckBox fx:id="chb_beardLong" layoutX="295.0" layoutY="585.0" mnemonicParsing="false" prefWidth="80.0" text="اندازه ریش" AnchorPane.rightAnchor="30.0" />
+                <CheckBox fx:id="chb_noseSize" layoutX="301.0" layoutY="633.0" mnemonicParsing="false" prefWidth="80.0" text="اندازه بینی" AnchorPane.rightAnchor="30.0" />
+                <ComboBox fx:id="combo_colorPicker_eye" layoutX="106.0" layoutY="712.0" prefWidth="150.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="140.0">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="black" />
+                            <String fx:value="SkyBlue" />
+                            <String fx:value="LightSteelBlue" />
+                            <String fx:value="SaddleBrown" />
+                            <String fx:value="SeaGreen" />
+                        </FXCollections>
+                    </items>
+                    <value>
+                        <String fx:value="black" />
+                    </value>
+                </ComboBox>
+                <ComboBox fx:id="combo_colorPicker_hair" layoutX="106.0" layoutY="766.0" prefWidth="150.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="140.0">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="black" />
+                            <String fx:value="white" />
+                            <String fx:value="PaleGoldenRod" />
+                            <String fx:value="SaddleBrown" />
+                        </FXCollections>
+                    </items>
+                    <value>
+                        <String fx:value="black" />
+                    </value>
+                </ComboBox>
+                <ComboBox fx:id="combo_colorPicker_skin" layoutX="106.0" layoutY="829.0" prefWidth="150.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="140.0">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="AntiqueWhite" />
+                            <String fx:value="SaddleBrown" />
+                        </FXCollections>
+                    </items>
+                    <value>
+                        <String fx:value="AntiqueWhite" />
+                    </value>
+                </ComboBox>
+                <Slider fx:id="slider_noseSize" blockIncrement="5.0" layoutX="55.0" layoutY="632.0" majorTickUnit="20.0" min="20.0" minorTickCount="5" prefHeight="16.0" prefWidth="207.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="140.0" />
+                <Slider fx:id="slider_beardLong" blockIncrement="5.0" layoutX="55.0" layoutY="584.0" majorTickUnit="20.0" minorTickCount="5" prefHeight="38.0" prefWidth="207.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="140.0" />
+                <Slider fx:id="slider_mustacheLong" blockIncrement="5.0" layoutX="35.0" layoutY="523.0" majorTickUnit="20.0" minorTickCount="5" prefHeight="38.0" prefWidth="233.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="140.0" />
+                <Slider fx:id="slider_hairLong" blockIncrement="5.0" layoutX="42.0" layoutY="470.0" majorTickUnit="20.0" minorTickCount="5" prefHeight="38.0" prefWidth="233.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="140.0" />
+                <Slider fx:id="slider_age" blockIncrement="4.0" layoutX="60.0" layoutY="409.0" majorTickUnit="20.0" max="80.0" min="20.0" minorTickCount="5" prefHeight="16.0" prefWidth="207.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="30.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="140.0" />
+                <ComboBox fx:id="combo_glasses" layoutX="106.0" layoutY="357.0" prefWidth="150.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="140.0">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="yes" />
+                            <String fx:value="no" />
+                        </FXCollections>
+                    </items>
+                    <value>
+                        <String fx:value="no" />
+                    </value>
+                </ComboBox>
+                <ToggleButton fx:id="toggleBtn_switchOn" layoutX="156.0" layoutY="898.0" mnemonicParsing="false" onAction="#onClick_toggleBtn_SwitchOn" prefHeight="27.0" prefWidth="102.0" text="روشن" AnchorPane.leftAnchor="156.0" AnchorPane.rightAnchor="155.0" />
+            </children>
+        </AnchorPane>
+    </items>
+</SplitPane>
